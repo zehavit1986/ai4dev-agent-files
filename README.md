@@ -24,3 +24,15 @@ Run any script directly, e.g.:
 ```bash
 python 01-messages.py
 ```
+
+## Notebooks
+
+Prompt evaluation experiments. Each notebook is self-contained: it generates its own dataset, runs a prompt against every test case, grades the results, and reports an average score.
+
+- **06-prompt_evals_model_grader.ipynb** — Model-graded evals. Has Claude generate an AWS-flavored dataset of Python/JSON/Regex tasks, runs each task through the model, then uses a second "code reviewer" prompt to grade each output (strengths, weaknesses, reasoning, 1–10 score).
+- **08-prompt_evals_complete.ipynb** — Adds deterministic syntax grading on top of the model grader. Outputs are validated by actually parsing them (`json.loads`, `ast.parse`, `re.compile`), and the final score averages the syntax score with the model score. Also uses assistant prefill + `stop_sequences` to force code-only responses.
+- **12-prompt-engineering.ipynb** — Packages the whole workflow into a reusable `PromptEvaluator` class: templated prompts with `{placeholder}` inputs, dataset generation from a task description, concurrent test execution (`max_concurrent_tasks`), and an HTML report. The worked example evaluates a meal-plan prompt for athletes.
+
+### Generated files
+
+`dataset.json`, `output.json`, and `output.html` are produced by the notebooks and are overwritten on each run.
