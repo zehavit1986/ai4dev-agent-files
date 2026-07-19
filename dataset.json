@@ -3,16 +3,16 @@
     "prompt_inputs": {
       "height": "178 cm",
       "weight": "68 kg",
-      "goal": "Marathon training day with 3000+ calorie intake and carbohydrate loading",
+      "goal": "Elite marathon runner preparing for a 20-mile training run with optimized carbohydrate timing and recovery nutrition",
       "restrictions": "None"
     },
     "solution_criteria": [
-      "Total daily calories meet or exceed 3000 with emphasis on carbohydrates (55-65% of total)",
-      "Includes hydration timing recommendations throughout the day",
-      "Meal plan is compact and covers all meals for one full day",
-      "Nutritionally appropriate for high-endurance marathon runner"
+      "Meal plan covers a full day with pre-workout, during-workout, and post-workout nutrition windows aligned to the 20-mile run",
+      "Total daily carbohydrate intake is appropriate for high-volume endurance training (approximately 8-10g per kg body weight)",
+      "Pre-workout meal is provided 2-3 hours before the run; during-workout fueling strategy includes carbohydrate sources for runs exceeding 90 minutes; recovery meal is within 30-60 minutes post-run",
+      "Plan is compact and concise (approximately 150-250 words)"
     ],
     "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
-    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 3000+ calories with emphasis on carbohydrate loading and hydration timing throughout the day"
+    "scenario": "Testing with a elite endurance athlete (marathon runner) requiring high carbohydrate intake and specific timing around 20-mile training run, including pre-workout, during-workout, and recovery nutrition windows"
   }
 ]
