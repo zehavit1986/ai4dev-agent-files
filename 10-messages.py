@@ -50,6 +50,11 @@ add_user_message(messages, userText2)
 # Get the follow-up response with full context
 final_answer = chat(messages)
 
+add_assistant_message(messages, final_answer)
+
 
 print("-- The LLM second reponse:")
 print(final_answer)
+
+# print("Messages:")
+# print(messages)
