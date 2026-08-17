@@ -7,7 +7,7 @@ client = Anthropic()
 model = "claude-haiku-4-5"
 
 messages = [
-    {"role": "user", "content": "Define quantum computing in one sentence"}
+    {"role": "user", "content": "Define quantum computing"}
 ]
 
 with client.messages.stream(
@@ -16,7 +16,7 @@ with client.messages.stream(
     messages=messages
 ) as stream:
     for text in stream.text_stream:
-        # Send each chunk to your client
+        # Send each chunk to the client (e.g. via websocket)
         print(text, end="", flush=True)
 
     # Get the complete message for database storage

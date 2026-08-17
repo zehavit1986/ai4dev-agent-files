@@ -17,37 +17,39 @@ def add_assistant_message(messages, text):
     assistant_message = {"role": "assistant", "content": text}
     messages.append(assistant_message)
 
-def chat(messages, system=None, temperature=1.0):
-    params = {
-        "model": model,
-        "max_tokens": 1000,
-        "messages": messages,
-        "temperature": temperature
-    }
-
-    if system:
-        params["system"] = system
-
-    message = client.messages.create(**params)
+def chat(messages):
+    message = client.messages.create(
+        model=model,
+        max_tokens=1000,
+        messages=messages,
+    )
     return message.content[0].text
 
 
 # Start with an empty message list
 messages = []
 
+userText1 = "Define quantum computing in one sentence"
+userText2 = "Write another sentence"
+
 # Add the initial user question
-add_user_message(messages, "Define quantum computing in one sentence")
+add_user_message(messages, userText1)
 
 # Get Claude's response
 answer = chat(messages)
+
+print("-- The LLM first reponse:")
+print(answer)
 
 # Add Claude's response to the conversation history
 add_assistant_message(messages, answer)
 
 # Add a follow-up question
-add_user_message(messages, "Write another sentence")
+add_user_message(messages, userText2)
 
 # Get the follow-up response with full context
 final_answer = chat(messages)
 
+
+print("-- The LLM second reponse:")
 print(final_answer)
