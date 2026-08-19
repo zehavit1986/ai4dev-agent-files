@@ -6,7 +6,6 @@ Small examples for using the Anthropic Python SDK with Claude, including:
 - system prompts
 - temperature tuning
 - streaming responses
-- notebook-based prompt evaluation
 
 ## Prerequisites
 
@@ -50,20 +49,6 @@ python 30-temperature.py
 python 40-stream.py
 ```
 
-## Notebooks
-
-- **50-prompt_eval.ipynb**  
-   Prompt evaluation workflow for generated test cases.
-
-- **60-prompt-engineering.ipynb**  
-   Prompt engineering and evaluation experiments.
-
-## Datasets and Results
-
-- **dataset-athlete.json** - Dataset used for athlete-oriented prompt tasks.
-- **dataset-aws.json** - Dataset used for AWS-oriented prompt tasks.
-- **prompt-eval-results-v1.md** - Evaluation report for prompt version v1.
-- **prompt-eval-results-v2.md** - Evaluation report for prompt version v2.
 
 ## Notes
 
