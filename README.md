@@ -4,7 +4,6 @@ Small examples for using the Anthropic Python SDK with Claude, including:
 
 - message-based chat
 - system prompts
-- temperature tuning
 - streaming responses
 
 ## Prerequisites
@@ -34,10 +33,7 @@ Small examples for using the Anthropic Python SDK with Claude, including:
 - **20-system-prompt.py**  
    Adds a `system` prompt to shape model behavior (math tutor style).
 
-- **30-temperature.py**  
-   Compares low vs high `temperature` outputs for the same prompt.
-
-- **40-stream.py**  
+- **30-stream.py**  
    Streams output token-by-token using `client.messages.stream(...)`.
 
 Run any script from the project root:
@@ -45,8 +41,7 @@ Run any script from the project root:
 ```bash
 python 10-messages.py
 python 20-system-prompt.py
-python 30-temperature.py
-python 40-stream.py
+python 30-stream.py
 ```
 
 
