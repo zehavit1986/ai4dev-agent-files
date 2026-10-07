@@ -59,10 +59,15 @@ python3 -m pip install python-dotenv
 python3 10-messages.py
 
 git remote rename origin upstream      # keep the original repo as "upstream"
+
 git remote add origin https://github.com/<your-username>/proj-anthropic-python-sdk-part1.git
+
 git remote add origin https://github.com/zehavit1986/ai4dev-agent-files
+
 git push -u origin main
 
 git add .
+
 git commit -m "describe your change"
+
 git push
