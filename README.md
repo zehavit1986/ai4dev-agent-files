@@ -49,10 +49,13 @@ python 30-stream.py
 
 - Model name in the scripts is currently set to `claude-haiku-4-5`.
 
-- ## RUN
+## RUN
 pip install anthropic
+
 python3 -m pip install anthropic
+
 python3 -m pip install python-dotenv
+
 python3 10-messages.py
 
 git remote rename origin upstream      # keep the original repo as "upstream"
