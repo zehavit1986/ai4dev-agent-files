@@ -6,7 +6,7 @@ load_dotenv()
 client = Anthropic()
 model = "claude-haiku-4-5"
 
-
+# Helper
 # Helper functions to manage the conversation history
 
 def add_user_message(messages, text):
